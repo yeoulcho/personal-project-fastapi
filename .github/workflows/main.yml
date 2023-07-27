@@ -39,7 +39,11 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GHCR_TOKEN }}  
-          
+      - name: make properties files
+        run: |
+          echo "${{ secrets.NAVER_SEARCH_API_ENV }}" > ./naver_seach_api.ini
+          echo "${{ secrets.SSL_CERT }}" > ./certificate.pem
+          echo "${{ secrets.SSL_PRIVATE_KEY }}" > ./private.key
       - name: Build and push Docker image
         uses: docker/build-push-action@v2
         with:
