@@ -16,5 +16,5 @@ app.add_middleware(
     allow_methods=["*"],  # *은 전부다
     allow_headers=["*"],
 )
-app.include_router(crawl_blog_router)
+eeapp.include_router(crawl_blog_router)
 
