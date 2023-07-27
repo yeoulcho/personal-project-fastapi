@@ -1,12 +1,12 @@
 from fastapi import FastAPI
 
-from cafe.crawl_blog_router import crawl_blog_router
+from app.cafe.crawl_blog_router import crawl_blog_router
 app = FastAPI()
 
 if __name__ == '__main__':
     print('PyCharm')
 
-origins = ["http://localhost:8080"]
+origins = ["https://coffeeground.site"]
 from fastapi.middleware.cors import CORSMiddleware
 
 app.add_middleware(
@@ -16,5 +16,5 @@ app.add_middleware(
     allow_methods=["*"],  # *은 전부다
     allow_headers=["*"],
 )
-eeapp.include_router(crawl_blog_router)
+app.include_router(crawl_blog_router)
 
