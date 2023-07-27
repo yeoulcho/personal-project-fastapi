@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 
-from app.cafe.crawl_blog_router import crawl_blog_router
+from cafe.crawl_blog_router import crawl_blog_router
 app = FastAPI()
 
 if __name__ == '__main__':

@@ -7,6 +7,7 @@ import json
 import pandas as pd
 from fastapi import APIRouter
 from flask import Flask, request, jsonify
+from dotenv import load_dotenv
 
 app = Flask(__name__)
 
@@ -32,11 +33,14 @@ def getresult(client_id, client_secret, query, display=10, start=1, sort='sim'):
 
 
 import configparser
-
-config = configparser.ConfigParser()
-config.read('./naver_search_api.ini')
-client_id = config['DEFAULT']['client_id']
-client_secret = config['DEFAULT']['client_secret']
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+load_dotenv(os.path.join(BASE_DIR, "../../.env"))
+# config = configparser.ConfigParser()
+# config.read('./naver_search_api.ini')
+client_id = os.environ["CLIENT_ID"]
+# config['DEFAULT']['client_id']
+client_secret = os.environ["CLIENT_SECRET"]
+# config['DEFAULT']['client_secret']
 display = 10
 start = 1
 sort = 'sim'
