@@ -34,7 +34,7 @@ def getresult(client_id, client_secret, query, display=10, start=1, sort='sim'):
 import configparser
 
 config = configparser.ConfigParser()
-config.read('./naver_search_api.ini')
+config.read('.././naver_search_api.ini')
 client_id = config['DEFAULT']['client_id']
 client_secret = config['DEFAULT']['client_secret']
 display = 10
