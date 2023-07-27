@@ -35,7 +35,7 @@ def getresult(client_id, client_secret, query, display=10, start=1, sort='sim'):
 import configparser
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-load_dotenv(os.path.join(BASE_DIR, "../../.env"))
+load_dotenv(os.path.join(BASE_DIR, "../.env"))
 # config = configparser.ConfigParser()
 # config.read('./naver_search_api.ini')
 client_id = os.environ["CLIENT_ID"]
