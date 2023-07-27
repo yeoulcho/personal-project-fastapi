@@ -41,7 +41,7 @@ jobs:
           password: ${{ secrets.GHCR_TOKEN }}  
       - name: make properties files
         run: |
-          ls app
+          cd app
           pwd
           echo "${{ secrets.NAVER_SEARCH_API_ENV }}" > ./.env
           echo "${{ secrets.SSL_CERT }}" > ./certificate.pem
