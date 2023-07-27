@@ -33,6 +33,7 @@ def getresult(client_id, client_secret, query, display=10, start=1, sort='sim'):
 
 
 import configparser
+
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 load_dotenv(os.path.join(BASE_DIR, "../../.env"))
 # config = configparser.ConfigParser()
@@ -41,6 +42,7 @@ client_id = os.environ["CLIENT_ID"]
 # config['DEFAULT']['client_id']
 client_secret = os.environ["CLIENT_SECRET"]
 # config['DEFAULT']['client_secret']
+
 display = 10
 start = 1
 sort = 'sim'
