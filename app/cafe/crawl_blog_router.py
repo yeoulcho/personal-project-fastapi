@@ -1,6 +1,4 @@
 import os
-import pickle
-import sys
 import urllib.request
 
 import json

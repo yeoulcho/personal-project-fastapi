@@ -3,3 +3,4 @@ naver_search_api.ini
 /certificate.crt
 /certificate.pem
 /private.key
+.env
