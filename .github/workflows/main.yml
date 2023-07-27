@@ -41,11 +41,12 @@ jobs:
           password: ${{ secrets.GHCR_TOKEN }}  
       - name: make properties files
         run: |
-          ls
+          ls app
           pwd
           echo "${{ secrets.NAVER_SEARCH_API_ENV }}" > ./.env
           echo "${{ secrets.SSL_CERT }}" > ./certificate.pem
           echo "${{ secrets.SSL_PRIVATE_KEY }}" > ./private.key
+          ls
       - name: Build and push Docker image
         uses: docker/build-push-action@v2
         with:
