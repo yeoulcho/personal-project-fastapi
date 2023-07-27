@@ -42,7 +42,8 @@ jobs:
       - name: make properties files
         run: |
           ls
-          echo "${{ secrets.NAVER_SEARCH_API_ENV }}" > ./naver_seach_api.ini
+          pwd
+          echo "${{ secrets.NAVER_SEARCH_API_ENV }}" > ./.env
           echo "${{ secrets.SSL_CERT }}" > ./certificate.pem
           echo "${{ secrets.SSL_PRIVATE_KEY }}" > ./private.key
       - name: Build and push Docker image
