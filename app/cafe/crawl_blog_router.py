@@ -61,7 +61,7 @@ async def crawl_blog_router1(placeName: str):
     result = getresult(client_id, client_secret, query, display, start, sort)
     for i in ["title", "description"]:
         for j in range(len(result.values)):
-            result[i][j] = result[i][j].replace("<b>", "").replace("</b>", "")
+            result[i][j] = result[i][j].replace("<b>", "").replace("</b>", "").replace("&quot;", "").replace("&lt;", "").replace("&gt;", "")
     # print(result.replace({"<b>" : " ","</b>": " "}))
     return result
     # result_all = pd.concat([result_all, result])
